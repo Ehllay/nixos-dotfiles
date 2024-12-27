@@ -1,0 +1,3 @@
+**/hardware-configuration.nix
+**/modules/secrets.nix
+**/home/homeSecrets.nix
