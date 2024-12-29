@@ -3,9 +3,14 @@
     # ./hyprland
     ./programs
     ./git.nix
-    ./homeSecrets.nix
     ./nixvim.nix
     ./xdg.nix
+    # Import secrets if file exists else skip
+    (
+      if builtins.pathExists ./homeSecrets.nix
+      then ./homeSecrets.nix
+      else {}
+    )
   ];
 
   home = {
